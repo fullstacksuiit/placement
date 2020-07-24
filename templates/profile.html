@@ -1,0 +1,424 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+     <meta charset="utf-8">
+    <title>SUIIT Placement | Sambalpur University Institute of Information Technology - an autonomous constituent
+        institute of Sambalpur University in the line of IIIT</title>
+    <meta name=msapplication-TileColor content="#002147">
+    <meta name=theme-color content="#002147">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Sambalpur University Institute of Information Technology - an autonomous constituent institute of Sambalpur University in the line of IIIT">
+    <meta name="Author" content="Tanshit Rahman | 17BTCSE48">
+
+    <meta name=application-name content=strix>
+    <meta name=keywords
+        content="Website Designer in Rourkela, Website in Rourkela, Web Developer at Rourkela, web designer in rourkela, website company at rourkela,  website designing company at rourkela, strix, strix inc,  Strix Inc, Strix Rourkela.,Tanshit Strix , Tanshit rahman, Tahseen Rahman, Ankush, Ankit, Aniketh ">
+    <meta property=og:title content="SUIIT Placement">
+    <meta property=og:type content="website">
+
+    <meta property=og:description
+        content="Sambalpur University Institute of Information Technology - an autonomous constituent institute of Sambalpur University in the line of IIIT">
+
+    <meta name=mobile-web-app-capable content="yes">
+  
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="{%static 'assets/img/favicon.ico' %}" type="image/x-icon">
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/flaticon-set.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/magnific-popup.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/owl.theme.default.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/bootsnav.css' %}" rel="stylesheet" />
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+  <!-- ========== Google Fonts ========== -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
+
+    <!-- Start Header Top 
+        ============================================= -->
+         <div class="top-bar-area address-two-lines bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 address-info">
+                    <div class="info box">
+                        <ul>
+                            <li>
+                                <span><i class="fas fa-map"></i> Address</span>SUIIT,Burla - 768019
+                            </li>
+                            <li>
+                                <span><i class="fas fa-envelope-open"></i> Email</span>tp@suiit.ac.in
+                            </li>
+                            <li>
+                                <span><i class="fas fa-phone"></i> Contact</span>0663-2113254
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- End Header Top -->
+
+    <!-- Header 
+        ============================================= -->
+        <header id="home">
+
+            <!-- Start Navigation -->
+            <nav class="navbar navbar-default attr-border navbar-sticky bootsnav">
+
+                <div class="container">
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="{% static 'assets/img/logo.png' %}" class="logo" alt="Logo">
+                        </a>
+                    </div>
+                    <!-- End Header Navigation -->
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li >
+                                <a href="{% url 'index' %}" >Home</a>
+                                
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                                
+                            </li>
+                            <li>
+                                <a href="gallery.html" >Event</a>
+                                
+                            </li>
+                            <li>
+                                <a href="profile.html">Profile</a>
+                                
+                            </li>
+                            <li>
+                                <a href="login.html" >login</a>
+                                
+                            </li>
+                            <li>
+                                <a href="register.html">Register</a>
+                                
+                            </li>
+                            <li>
+                                <a href="contact.html">contact</a>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </nav>
+        </header>
+        <!-- End Header -->
+
+    <!-- Start Breadcrumb 
+        ============================================= -->
+        <div class="breadcrumb-area shadow dark text-center bg-fixed text-light" style="background-image: url({% static 'assets/img/banner/front.jpg' %});">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Profile</h1>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Breadcrumb -->
+
+    <!-- Start Students Profiel 
+        ============================================= -->
+        <div class="students-profiel adviros-details-area default-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 thumb">
+                        <img src="{{student.image.url}}" alt="Thumb">
+                    </div>
+                    <div class="col-md-7 info main-content">
+                        <!-- Star Tab Info -->
+                        <div class="tab-info">
+                            <!-- Tab Nav -->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#tab1" aria-expanded="true">
+                                        Dashboard
+                                    </a>
+                                </li>
+                            <!--     <li>
+                                    <a data-toggle="tab" href="#tab2" aria-expanded="false">
+                                        Orders
+                                    </a>
+                                </li> -->
+                                <li>
+                                    <a href="{% url 'logout' %}" aria-expanded="false">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- End Tab Nav -->
+                            <!-- Start Tab Content -->
+                            <div class="tab-content tab-content-info">
+                                <!-- Single Tab -->
+                                <div id="tab1" class="tab-pane fade active in">
+                                    <div class="info title">
+                                       <h4>Personal Detail</h4>
+                                        <ul>
+                                            <li>
+                                             Name : <span>{{student.fullname}}</span>
+                                            </li>
+                                            <li>
+                                                Gender : <span>{{student.gender}}</span>
+                                            </li>
+                                            <li>
+                                                Email : <span><a href="mailto:{{student.email}}">{{student.email}}</a></span>
+                                            </li>
+                                            <li>
+                                                Phone : <span><a href="tel:{{student.phone}}">{{student.phone}}</a></span>
+                                            </li>
+                                            <li>
+                                                Date of Birth : <span>{{student.dob}}</span>
+                                            </li>
+                                        </ul>
+                                        <p>&nbsp;</p>
+                                            <h4>Current Education Details</h4>
+                                        <ul>
+                                            <li>
+                                                Branch : <span> {{student.branch}}</span>
+                                            </li>
+                                            <li>
+                                                Year of Admission : <span> {{student.yearofadm}}</span>
+                                            </li>
+                                            <li>
+                                                Year of Completion : <span>{{student.yearofcomp}}</span>
+                                            </li>
+                                            <li>
+                                                Roll no. : <span>{{student.rollno}}</span>
+                                            </li>
+                                            <li>
+                                                Course : <span>{{student.course}}</span>
+                                            </li>
+                                        </ul>
+                                        <p>&nbsp;</p>
+                                        <h4>Previous Education Details</h4>
+                                        <ul>
+                                            <li>
+                                                Xth Percentage : <span>{{student.xth}}</span>
+                                            </li>
+                                            <li>
+                                                Xth Board : <span>{{student.xthb}}</span>
+                                            </li>
+                                            <li>
+                                                Xth Passing Year : <span>{{student.xthp}} </span>
+                                            </li>
+                                            <li>
+                                                XII Percentage : <span> {{student.xii}} </span>
+                                            </li>
+                                            <li>
+                                                XII Board : <span>{{student.xiib}} </span>
+                                            </li>
+                                            <li>
+                                                XII Passing Year : <span>{{student.xiip}} </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Single Tab -->
+
+                                <!-- Single Tab -->
+                               <!--  <div id="tab2" class="tab-pane fade">
+                                    <div class="info title">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Order</th>
+                                                        <th>Title</th>
+                                                        <th>Purchase Date</th>
+                                                        <th>Price</th>
+                                                        <th>Access</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>01.</td>
+                                                        <td><a href="#">Basic Web Development</a></td>
+                                                        <td>12 Nov, 2018</td>
+                                                        <td>$23.00</td>
+                                                        <td><a href="#">Preview</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>02.</td>
+                                                        <td><a href="#">Software Engineering</a></td>
+                                                        <td>14 Jan, 2019</td>
+                                                        <td>$55.00</td>
+                                                        <td><a href="#">Preview</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>03.</td>
+                                                        <td><a href="#">Introduction of machine</a></td>
+                                                        <td>18 Mar, 2019</td>
+                                                        <td>$44.00</td>
+                                                        <td><a href="#">Preview</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>04.</td>
+                                                        <td><a href="#">Hidden potential</a></td>
+                                                        <td>20 Feb, 2018</td>
+                                                        <td>$54.00</td>
+                                                        <td><a href="#">Preview</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05.</td>
+                                                        <td><a href="#">Introduction of PHP</a></td>
+                                                        <td>27 Mar, 2019</td>
+                                                        <td>$32.00</td>
+                                                        <td><a href="#">Preview</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- End Single Tab -->
+
+                                <!-- Single Tab -->
+                                {% comment %} <div id="tab3" class="tab-pane">
+                                    <div class="info title">
+                                        <p>
+                                            Esteem spirit temper too say adieus who direct esteem. It esteems luckily mr or picture placing drawing no. Apartments frequently or motionless on reasonable projecting expression. Way mrs end gave tall walk fact bed. Expect relied do we genius is. On as around spirit of hearts genius. Is raptures daughter branched laughter peculiar in settling. 
+                                        </p>
+                                        <div class="row">
+                                            <form action="#" class="contact-form">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input class="form-control" placeholder="Name" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input class="form-control" placeholder="Email" type="email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input class="form-control" placeholder="Phone" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group comments">
+                                                        <textarea class="form-control" placeholder="About Yourself"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <button type="submit">
+                                                        Update
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="update-pass">
+                                            <h4>Change Password</h4>
+                                            <!-- <p>
+                                                Esteem spirit temper too say adieus who direct esteem. It esteems luckily mr or picture placing drawing no. Apartments frequently or motionless on reasonable projecting expression. Way mrs end gave tall walk fact bed. Expect relied do we genius is. On as around spirit of hearts genius. Is raptures daughter branched laughter peculiar in settling. 
+                                            </p> -->
+                                            <div class="row">
+                                                <form action="#" class="contact-form">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" placeholder="Chose Password" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" placeholder="Retype Password" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input class="form-control" placeholder="Old Password" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <button type="submit">
+                                                            Update
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> {% endcomment %}
+                                <!-- End Single Tab -->
+                            </div>
+                            <!-- End Tab Content -->
+                        </div>
+                        <!-- End Tab Info -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Students Profile -->
+
+    <!-- Start Footer 
+        ============================================= -->
+    <footer>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <p>&copy;
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script> | <a href="https://suiit.ac.in" target="_blank">SUIIT Training &amp; Placement Cell</a></p>
+                        </div>
+                        <div class="col-md-6 text-right link">
+                            <p>Designed & Developed By : Tanshit Rahman</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery Frameworks
+        ============================================= -->
+        <script src="{% static 'assets/js/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/js/equal-height.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.appear.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'assets/js/modernizr.custom.13711.js' %}"></script>
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/js/wow.min.js' %}"></script>
+        <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'assets/js/count-to.js' %}"></script>
+        <script src="{% static 'assets/js/bootsnav.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+    </body>
+    </html>
