@@ -124,6 +124,7 @@ TIME_INPUT_FORMATS = ('%I:%M %p',)
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
 STATIC_URL = '/static/'
 if DEBUG:
     STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
