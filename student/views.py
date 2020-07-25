@@ -17,6 +17,7 @@ def about(request):
     return render(request, "about.html")
 
 def display_students(request):
+    students = Student.objects.all()
     context = {"students": students}
     return render(request, 'display.html', context)
     
