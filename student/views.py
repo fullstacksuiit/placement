@@ -17,8 +17,20 @@ def about(request):
     return render(request, "about.html")
 
 def display_students(request):
-    students = Student.objects.all()
-    context = {"students": students}
+    year = 2020
+    students = Student.objects.filter(yearofcomp=year)
+    if request.method == "POST":
+        rp = request.POST
+        year = rp.get("year")
+        students = Student.objects.filter(yearofcomp=year)
+        course = rp.get("course")
+        if course is not None:
+            students = students.objects.filter(course=course)
+        branch = rp.get("branch")
+        if branch is not None:
+            students = students.objects.filter(branch=branch)
+    students = students.order_by('rollno')
+    context = {"students": students, 'year': year}
     return render(request, 'display.html', context)
     
 def contact(request):
@@ -31,12 +43,12 @@ def contact(request):
 
 def registration(request):
     if request.method == "POST":
-        rollno = request.POST.get("rollno")
+        rollno = request.POST.get("rollno").upper()
         if Student.objects.filter(rollno=rollno).exists():
                 context = {"error" : "Already Registered"}
                 return render(request, 'registration.html', context=context)
         image = request.FILES.get("image")
-        fullname = request.POST.get("fullname")
+        fullname = request.POST.get("fullname").upper()
         gender = request.POST.get("gender")
         email = request.POST.get("email")
         phone = request.POST.get("phone")
@@ -71,7 +83,7 @@ def signup(request):
         stud = Student.objects.get(rollno=rollno)
         user = User(username=rollno, password=encrypted_password, email=stud.email)
         user.save()
-        #return login page.
+        # * return login page.
         return redirect("login")
     return render(request, "signup.html")
 
@@ -135,7 +147,7 @@ def edit_info(request, rollno):
         Student.objects.filter(rollno=rollno).update(fullname=fullname, gender=gender, email=email, dob=dob, phone=phone, branch=branch, yearofcomp=yearofcomp, yearofadm=yearofadm, course=course, xth=xth, xthb=xthb, xthp=xthp, xii=xii, xiib=xiib, xiip=xiip)
     student = Student.objects.get(rollno=rollno)
     context = {"student": student}
-    return render(request, "edit.html", context)
+    return render(request, "edit-profile.html", context)
 
 @login_required
 def logout_user(request):

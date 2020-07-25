@@ -92,7 +92,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="{% url 'index' %}">
                             <img src="{% static 'assets/img/logo.png' %}" class="logo" alt="Logo">
                         </a>
                     </div>
@@ -101,32 +101,29 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li >
-                                <a href="index.html" >Home</a>
-                                
+                            <li>
+                                <a href="{% url 'index' %}">Home</a>
+    
                             </li>
                             <li>
-                                <a href="about.html">About</a>
-                                
+                                <a href="{% url 'about' %}">About</a>
+    
                             </li>
                             <li>
-                                <a href="gallery.html" >Event</a>
-                                
+                                <a href="{% url 'gallery' %}">Gallery</a>
+    
                             </li>
                             <li>
-                                <a href="profile.html">Profile</a>
-                                
+                                <a href="{% url 'contact' %}">Contact</a>
+    
                             </li>
                             <li>
-                                <a href="login.html" >login</a>
-                                
+                                <a href="{% url 'login' %}">login</a>
+    
                             </li>
                             <li>
-                                <a href="register.html">Register</a>
-                                
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
+                                <a href="{% url 'register' %}">Register</a>
+    
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->

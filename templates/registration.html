@@ -13,9 +13,6 @@
     <meta name="description"
         content="Sambalpur University Institute of Information Technology - an autonomous constituent institute of Sambalpur University in the line of IIIT">
     <meta name="Author" content="Tanshit Rahman | 17BTCSE48">
-
-    <meta name=application-name content=strix>
-    
     <meta property=og:type content="website">
 
     <meta property=og:description
@@ -86,23 +83,6 @@
         <!-- Start Navigation -->
         <nav class="navbar navbar-default attr-border navbar-sticky bootsnav">
 
-            <!-- Start Top Search -->
-            <div class="container">
-                <div class="row">
-                    <div class="top-search">
-                        <div class="input-group">
-                            <form action="#">
-                                <input type="text" name="text" class="form-control" placeholder="Search">
-                                <button type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Top Search -->
-
             <div class="container">
 
                 <!-- Start Header Navigation -->
@@ -110,38 +90,35 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{% url 'index' %}">
                         <img src="{% static 'assets/img/logo.png' %}" class="logo" alt="Logo">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right">
+                   <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{% url 'index' %}">Home</a>
 
                         </li>
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="{% url 'about' %}">About</a>
 
                         </li>
                         <li>
-                            <a href="gallery.html">Event</a>
+                            <a href="{% url 'gallery' %}">Gallery</a>
 
                         </li>
                         <li>
-                            <a href="profile.html">Profile</a>
+                            <a href="{% url 'contact' %}">Contact</a>
 
                         </li>
                         <li>
-                            <a href="login.html">login</a>
+                            <a href="{% url 'login' %}">login</a>
 
                         </li>
                         <li>
-                            <a href="register.html">Register</a>
+                            <a href="{% url 'register' %}">Register</a>
 
-                        </li>
-                        <li>
-                            <a href="contact.html">contact</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
