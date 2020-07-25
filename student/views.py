@@ -95,6 +95,8 @@ def login_user(request):
         user = authenticate(request, username=rollno, password=password)
         if user is not None:
             login(request, user)
+            if user.is_superuser is True:
+                return redirect("admin:index")
             return redirect("profile")
         else:
             return render(request, "login.html")

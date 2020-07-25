@@ -117,9 +117,16 @@
 
                         </li>
                        {% if user.is_authenticated %}
-                            <li>
-                                <a href="{% url 'profile' %}">Profile</a>
-                            </li>
+                                {% if user.is_superuser %}
+                                    <li>
+                                        <a href="{% url 'admin:index' %}">Admin</a>
+                                    </li>
+                                
+                                {% else %}
+                                    <li>
+                                        <a href="{% url 'profile' %}">Profile</a>
+                                    </li>
+                                {% endif %}
                             {% else %}
                                 <li>
                                     <a href="{% url 'login' %}">login</a>
