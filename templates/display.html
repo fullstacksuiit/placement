@@ -109,12 +109,16 @@
 
                         </li>
                         <li>
+                                <a href="{% url 'students' %}">Students</a>
+    
+                            </li>
+                        <li>
                             <a href="{% url 'contact' %}">Contact</a>
 
                         </li>
                         {% if user.is_authenticated %}
                         <li>
-                            <a href="{% url 'user.username' %}">Profile</a>
+                            <a href="{% url 'profile' %}">Profile</a>
 
                         </li>
                         {% else %}
@@ -247,6 +251,9 @@
                                 <th>Email</th>
                                 <th>Branch & Course</th>
                                 <th>Year of Completion</th>
+                                 {% comment %} {% if user.is_superuser %}
+                                <th>Phone</th>
+                                {% endif %} {% endcomment %}
                             </tr>
                         </thead>
                         <tbody>
@@ -255,8 +262,11 @@
                                 <td>{{ s.rollno }}</td>
                                 <td>{{ s.fullname }}</td>
                                 <td>{{ s.email }}</td>
-                                <td>{{ s.course }} | {{ s.branch }} </td>
+                                <td>{{ s.course }} &nbsp; {{ s.branch }} </td>
                                 <td>{{ s.yearofcomp }}</td>
+                                 {% comment %} {% if user.is_superuser %}
+                                <td>{{ s.phone }}</td>
+                                {% endif %} {% endcomment %}
                             </tr>
                             {% endfor %}
 
