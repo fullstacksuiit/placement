@@ -43,7 +43,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
 
 </head>
-
+    {% if user.is %}{% endif %}
 <body>
 
     <!-- Preloader Start -->
@@ -112,7 +112,13 @@
                             <a href="{% url 'contact' %}">Contact</a>
 
                         </li>
+                        {% if user.is_authenticated %}
                         <li>
+                            <a href="{% url 'user.username' %}">Profile</a>
+
+                        </li>
+                        {% else %}
+                         <li>
                             <a href="{% url 'login' %}">login</a>
 
                         </li>
@@ -120,6 +126,10 @@
                             <a href="{% url 'register' %}">Register</a>
 
                         </li>
+                        {% endif %}
+
+  
+                       
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>

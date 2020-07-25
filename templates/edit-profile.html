@@ -112,14 +112,20 @@
                             <a href="{% url 'contact' %}">Contact</a>
 
                         </li>
-                        <li>
-                            <a href="{% url 'login' %}">login</a>
-
-                        </li>
-                        <li>
-                            <a href="{% url 'register' %}">Register</a>
-
-                        </li>
+                        {% if user.is_authenticated %}
+                            <li>
+                                <a href="{% url 'profile' %}">Profile</a>
+                            </li>
+                            {% else %}
+                                <li>
+                                    <a href="{% url 'login' %}">login</a>
+        
+                                </li>
+                                <li>
+                                    <a href="{% url 'register' %}">Register</a>
+        
+                                </li>
+                            {% endif %}
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>

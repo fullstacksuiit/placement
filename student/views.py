@@ -95,17 +95,21 @@ def login_user(request):
         user = authenticate(request, username=rollno, password=password)
         if user is not None:
             login(request, user)
-            return redirect("profile", user.username)
+            return redirect("profile")
         else:
             return render(request, "login.html")
     return render(request, "login.html")
 
 @login_required
-def profile(request, rollno):
+def student(request, rollno):
     student = Student.objects.get(rollno=rollno)
     context = {"student": student}
     return render(request, "profile.html", context)
 
+@login_required
+def profile(request):
+    rollno = request.user.username
+    return student(request, rollno)
     
 def gallery(request):
     photos = Gallery.objects.all()

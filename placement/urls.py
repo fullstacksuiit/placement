@@ -17,8 +17,10 @@ urlpatterns = [
     path('logout', logout_user, name="logout"),
     path("edit/<str:rollno>", edit_info, name="edit"),
     path('gallery', gallery, name="gallery"),
-    path("profile/<str:rollno>", profile, name="profile"),
+    path("profile", profile, name="profile"),
+    path("student/<str:rollno>", student, name="student"),
 ]
+
 if settings.DEBUG: 
         urlpatterns += static(settings.MEDIA_URL, 
                               document_root=settings.MEDIA_ROOT)
